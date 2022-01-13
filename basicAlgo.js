@@ -30,3 +30,21 @@ function convertTemp(temp, value)
 
 // console.log(convertTemp("celcius", -30));
 // console.log(convertTemp("fahrenheit", 14));
+
+/**
+ * reverseString()
+ * reverse the string and return the new 
+ * @param  {string} str string to be reversed
+ * @return {string} reversetr
+ */
+function reverseString(str) {
+
+    let reverseStr="";
+    for(let i=str.length-1; i>=0; i--)
+    {
+        reverseStr = reverseStr + str[i];
+    }
+    return reverseStr;
+  }
+  
+   //console.log(reverseString("Greetings from Earth"));
