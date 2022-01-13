@@ -106,3 +106,56 @@ function findLongestWordLength(str) {
   }
   
 //   console.log(findLongestWordLength("Error, please enter a string"));
+
+/**
+ * findGreaterNumber
+ * find the greater number in an array
+ * @param  {array} arr
+ * @return {number} greaterNumber
+ */
+function findGreaterNumber(arr)
+{
+    let greaterNumber = arr[0];
+
+    for(let i=0; i<arr.length; i++)
+    {
+        if(arr[i]> greaterNumber)
+        {
+            greaterNumber = arr[i];
+        }
+    }
+    return greaterNumber;
+}
+
+// console.log(findGreaterNumber([4, 5, 1, 3]));
+
+// numbers =[[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]];
+
+// let greaterNumbers = [];
+// numbers.forEach(element => {
+//     greaterNumbers.push(findGreaterNumber(element));
+// });
+
+// console.log(greaterNumbers);
+/**
+ * confirm ending
+ * confirm if a string ends with a given target
+ * @param  {string} str
+ * @param  {string} target
+ * @return {boolean}
+ */
+function confirmEnding(str, target) {
+
+    let lengthEndig = str.length - target.length;
+
+    if(str.substring(lengthEndig) === target)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+  }
+  
+  console.log(confirmEnding("Abstraction", "action"));
