@@ -75,3 +75,34 @@ function reverseString(str) {
   }
   
 //   console.log(factorialize());
+
+/**
+ * findLongestWordLength
+ * find the longest word length in a string
+ * @param  {string} str
+ * @return {string } longestWordLenfht
+ */
+function findLongestWordLength(str) {
+
+    if(typeof str !== "string")
+    {
+        return "Error, please enter a string";
+    }
+
+    str = str.split(" ");
+    let longestWordLength = 0;
+
+    for(let i=0; i<str.length;i++)
+    {
+        for(let j=0; j<str[i].length; j++)
+        {
+            if(str[i].length > longestWordLength)
+            {
+                longestWordLength = str[i].length;
+            }
+        }
+    }
+    return longestWordLength;
+  }
+  
+//   console.log(findLongestWordLength("Error, please enter a string"));
