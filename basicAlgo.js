@@ -48,3 +48,30 @@ function reverseString(str) {
   }
   
    //console.log(reverseString("Greetings from Earth"));
+   /**
+    * factorialize
+    * return the factorial of the num argument
+    * @param  {number} num 
+    * @return {number} num -> factorial of num
+    */
+   function factorialize(num) {
+       if(typeof num !== "number")
+       {
+           return "Error, please enter a number";
+       }
+       else if(num < 0)
+       {
+           num = num * -1;
+       }
+       
+       if(num === 1)
+       {
+           return 1;
+       }
+       else
+       {
+           return num * factorialize(num - 1);
+       }
+  }
+  
+//   console.log(factorialize());
