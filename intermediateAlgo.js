@@ -32,6 +32,7 @@ function sumAll(arr) {
 
 // console.log(sumAll([10, 5]));
 
+
 /**
  * difArray
  * @param  {array} arr1
@@ -56,6 +57,8 @@ function diffArray(arr1, arr2) {
 }
 
 // console.log(diffArray([], ["snuffleupagus", "cookie monster", "elmo"]));
+
+
 /**
  * destroyer
  * @param  {arry} arr
@@ -76,8 +79,12 @@ function destroyer(arr) {
 
 // console.log(destroyer([2, 3, 2, 3], 2, 3));
 
+/**
+ * @param  {array} collection
+ * @param  {object} source
+ * @return {array}
+ */
 function whatIsInAName(collection, source) {
-
   let keys = Object.keys(source);
 
   return collection.filter(function (obj) {
@@ -90,15 +97,13 @@ function whatIsInAName(collection, source) {
   });
 }
 
-// console.log(whatIsInAName(
-//   [
-//     { first: "Romeo", last: "Montague" },
-//     { first: "Mercutio", last: null },
-//     { first: "Tybalt", last: "Capulet" },
-//   ],
-//   { last: "Capulet" }
-// ));
-
-
-
-
+console.log(
+  whatIsInAName(
+    [
+      { first: "Romeo", last: "Montague" },
+      { first: "Mercutio", last: null },
+      { first: "Tybalt", last: "Capulet" },
+    ],
+    { last: "Capulet" }
+  )
+);
